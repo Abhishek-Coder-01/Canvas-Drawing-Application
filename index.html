@@ -1,0 +1,67 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icons" type="image/png" href="./image/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Drawing-App</title>
+
+</head>
+
+<body>
+    <section class="container">
+
+        <div id="toolbar" class="first">
+            <h1>Draw</h1>
+            <label for="stroke">Stroke</label>
+            <input id="stroke" name="stroke" type="color">
+            <label for="lineWidth">Line Width</label>
+            <input id="lineWidth" name="lineWidth" type="number" value="5">
+            <button id="clear">Clear</button>
+            <!-- Add Share Button -->
+            <div class="share-btn">
+                <button id="share" style="background-color: green;"><i
+                        class="fas fa-share"></i><span>Share</span></button>
+            </div>
+          
+        </div>
+
+
+
+        <div class="drawing-board" id="second">
+            <canvas id="drawing-board">
+
+            </canvas>
+            <div id="detail">
+                <h1 id="head">Welcome to the Artistic Canvas!</h1>
+
+            </div>
+
+        </div>
+
+        <!-- New container for undo and redo buttons -->
+        <div class="bottom-toolbar">
+
+            <img id="undoButton" style="margin-right: 10px;" src="./image/undo.png"  alt="">
+            <img id="redoButton" style="margin-left: 10px;" src="./image/redo.png"  alt="">
+
+        </div>
+
+
+    </section>
+
+    <div class="media">
+
+        <h2>Hello, Welcome</h2>
+        <h1>PLS Slelect Destop Mode. </h1>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Signika:wght@300..700&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+}
+
+#toolbar button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100px;
+    text-align: center;
+}
+
+#toolbar button:hover {
+    background-color: #777;
+}
+
+ h1 {
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar Styling */
+#toolbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    width: 100px;
+    background-color: #333;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+#toolbar * {
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+#toolbar label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #ddd;
+}
+
+#toolbar input[type="color"] {
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    width: 95%;
+}
+
+#toolbar input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: white;
+    font-size: 14px;
+}
+
+#toolbar button {
+    background-color: #1565c0;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 15px;
+    font-size: 19px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#toolbar button:hover {
+    background-color: #0d47a1;
+}
+
+/* Canvas Styling */
+.drawing-board {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    cursor: url('./image/icons8-cursor-24.png'), auto;
+}
+
+canvas {
+    border: 2px solid #444;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    border-radius: 9px;
+
+}
+
+#toolbar button {
+    background-color: #1565c0;
+    color: white;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#toolbar button:hover {
+    background-color: #0d47a1;
+    transform: scale(1.1);
+
+}
+
+#toolbar button:active {
+    transform: scale(0.9);
+}
+
+.bottom-toolbar {
+    position: absolute;
+    bottom: 2%;
+    left: 53%;
+}
+
+@media only screen and (max-width: 650px) {
+    .bottom-toolbar {
+        left: 57%;
+    }
+  
+}
+
+@media only screen and (max-width: 525px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        display: none;
+    }
+
+}
+
+/* Style for the media container */
+.media {
+    background-color: #f3f4f6;
+    /* Light background */
+    color: #333;
+    /* Dark text */
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style for the heading */
+.media {
+    font-weight: bold;
+    color: #2d3748;
+    /* Darker color for the heading */
+}
+
+h1,
+h2 {
+    font-family: 'Signika', sans-serif;
+
+}
+.bottom-toolbar img{
+    height: 35px;
+}
+
+.media h2 {
+    font-size: 20.2px;
+    margin-bottom: 10px;
+}
+
+.media h1 {
+    font-size: 31px;
+}
+
+#detail {
+    position: absolute;
+    top: 0%;
+    text-align: center;
+    font-size: 20px;   
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 93%;
+}
+#head {
+    animation-name: one;
+    animation-duration: 3s; /* Specify duration here */
+    animation-timing-function: ease-in-out; /* Define global timing function */
+}
+
+@keyframes one {
+    0% {
+        transform: translate(0px, -80px);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(10px, 50px);
+        opacity: 1;
+    }
+}
